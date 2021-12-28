@@ -35,9 +35,19 @@ jobs:
           dependencies-cache-enabled: true
           configuration-cache-enabled: true
 
-      - name: Upload debug apk
-        uses: actions/upload-artifact@v2
-        if: ${{ !github.head_ref }}
+      - name: Sign Android release
+        uses: r0adkll/sign-android-release@v1
+        id: sign_app
         with:
-          name: apk-debug
-          path: app/build/outputs/apk/debug
+          releaseDirectory: app/build/outputs/apk/release
+          signingKeyBase64: android123
+          alias: lib_builder
+          keyStorePassword: android123
+          keyPassword: sketchwarepro
+        env:
+          BUILD_TOOLS_VERSION: "30.0.2"
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Signed app bundle
+          path: ${{steps.sign_app.outputs.signedReleaseFile}}
