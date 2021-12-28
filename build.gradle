@@ -1,10 +1,11 @@
 buildscript {
-    ext.build_gradle_version = '7.3.3'
+    ext.build_gradle_version = '7.0.2'
 
     repositories {
         google()
         mavenLocal()
         mavenCentral()
+        maven { url 'https://maven.google.com' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$build_gradle_version"
@@ -17,6 +18,7 @@ allprojects {
         mavenLocal()
         mavenCentral()
         google()
+        maven { url 'https://maven.google.com' }
     }
 }
 
