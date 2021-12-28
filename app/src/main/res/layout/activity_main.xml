@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="10dp"
+	android:background="#FF000000"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_height="200dp"
+		android:layout_width="match_parent"
+		android:orientation="vertical"
+		android:layout_marginBottom="10dp">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:background="#FF191919">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:text="Log View"
+				android:textColor="#FFFFFFFF"
+				android:textStyle="bold"
+				android:padding="8dp"/>
+
+		</LinearLayout>
+
+		<TextView
+			android:layout_height="match_parent"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="match_parent"
+			android:textColor="#FFFFFFFF"
+			android:id="@+id/logtext"
+			android:background="#FF111111"
+			android:padding="10dp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_marginBottom="10dp"
+		android:padding="8dp"
+		android:background="#FF191919">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="30dp"
+			android:text="Library Name :"
+			android:padding="8dp"
+			android:layout_weight="1.0"
+			android:gravity="right"
+			android:textColor="#FFFFFFFF"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:inputType="textPersonName"
+			android:layout_width="100dp"
+			android:ems="10"
+			android:layout_weight="1.0"
+			android:textColor="#FFFFFFFF"
+			android:id="@+id/foldername"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:padding="8dp"
+		android:background="#FF191919">
+
+		<TextView
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:layout_width="wrap_content"
+			android:text="Jar File :"
+			android:layout_marginRight="10dp"
+			android:layout_weight="1.0"
+			android:padding="8dp"
+			android:gravity="right"
+			android:textColor="#FFFFFFFF"/>
+
+		<Button
+			style="?android:attr/buttonStyleSmall"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="Select Jar File"
+			android:layout_weight="1.0"
+			android:id="@+id/jarfile"/>
+
+	</LinearLayout>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="Compile"
+		android:background="#FF2A2A2A"
+		android:elevation="10dp"
+		android:textColor="#FFFFFFFF"
+		android:layout_marginTop="10dp"/>
+
+</LinearLayout>
+
